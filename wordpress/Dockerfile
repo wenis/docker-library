@@ -16,7 +16,7 @@ RUN set -ex; \
 	; \
 	\
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
-	docker-php-ext-install gd mysqli opcache pdo pdo_mysql; \
+	docker-php-ext-install zip gd mysqli opcache pdo pdo_mysql; \
 	\
 	runDeps="$( \
 		scanelf --needed --nobanner --recursive \
